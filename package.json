@@ -1,0 +1,24 @@
+{
+  "name": "gerat_theater",
+  "version": "1.0.0",
+  "description": "great theater",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp styles && gulp scripts && gulp watch"
+  },
+  "author": "Vito",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.0.0-beta2",
+    "browser-sync": "^2.26.14",
+    "browserify": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "*",
+    "gulp-uglify-es": "^2.0.0",
+    "vinyl-source-stream": "*"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,56 @@
+*,
+html,
+body,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+}
+li {
+  list-style: none;
+}
+a {
+  font-family: $OSCondensed;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+input {
+  border: none;
+  outline: none;
+}
+p {
+  font-family: $OS;
+}
+h1,
+h2,
+h3,
+span {
+  font-family: $OSCondensed;
+}
+
+div {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include tablet {
+    max-width: 100%;
+  }
+
+  @include laptop {
+    max-width: 692px;
+  }
+
+  @include desktop {
+    max-width: 1110px;
+  }
+}
