@@ -222,15 +222,68 @@
       text-align: center;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      
-      >span{
+      color: #ffffff;
+      > span {
         color: $theaterGold;
       }
     }
-    .ubout_theater-content{
+    .ubout_theater-content {
       display: flex;
-      &-descriptin{
-         
+      margin-top: 100px;
+      &-description {
+        display: flex;
+        flex-direction: column;
+        &_title {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 21px;
+          line-height: 29px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #ffffff;
+        }
+        &_text {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 150%;
+          color: #ffffff;
+          margin-top: 40px;
+        }
+      }
+      &-numbers {
+        &_title {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 21px;
+          line-height: 29px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #ffffff;
+        }
+        &-items {
+          margin-top: 40px;
+
+          &_item {
+            &:last-child {
+              @include desktop {
+                margin-top: 25px;
+              }
+            }
+            .item_text {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 22px;
+              letter-spacing: 0.05em;
+              color: #ffffff;
+              margin-top: 15px;
+              > span {
+                color: $theaterGold;
+              }
+            }
+          }
+        }
       }
     }
   }
