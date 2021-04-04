@@ -49,27 +49,78 @@
           </div>
 
           <header class="header">
-            <ul class="header_nav_panel">
-              <li class="header_nav_panel-item">
-                <a href="#" class="header_nav_panel-item-text">главная</a>
-              </li>
-              <li class="header_nav_panel-item">
-                <a href="#" class="header_nav_panel-item-text">о театре</a>
-              </li>
-              <li class="header_nav_panel-item">
-                <a href="#" class="header_nav_panel-item-text"
-                  >наши постановки</a
-                >
-              </li>
-              <li class="header_nav_panel-item">
-                <a href="#" class="header_nav_panel-item-text"
-                  >партнеры театра</a
-                >
-              </li>
-              <li class="header_nav_panel-item">
-                <a href="#" class="header_nav_panel-item-text">контакты</a>
-              </li>
-            </ul>
+            <div class="nav_wraper">
+              <ul class="header_nav_panel">
+                <li class="header_nav_panel-item">
+                  <a href="#" class="header_nav_panel-item-text">главная</a>
+                </li>
+                <li class="header_nav_panel-item">
+                  <a href="#" class="header_nav_panel-item-text">о театре</a>
+                </li>
+                <li class="header_nav_panel-item">
+                  <a href="#" class="header_nav_panel-item-text"
+                    >наши постановки</a
+                  >
+                </li>
+                <li class="header_nav_panel-item">
+                  <a href="#" class="header_nav_panel-item-text"
+                    >партнеры театра</a
+                  >
+                </li>
+                <li class="header_nav_panel-item">
+                  <a href="#" class="header_nav_panel-item-text">контакты</a>
+                </li>
+
+                <li class="header_nav_panel-social">
+                  <div class="first_block">
+                    <a href="" class="header_nav_panel-social_item">
+                      <svg
+                        width="26"
+                        height="45"
+                        preserveAspectRatio="xMidYMid meet"
+                      >
+                        <use xlink:href="img/face.svg#face"></use>
+                      </svg>
+                    </a>
+                    <a href="" class="header_nav_panel-social_item">
+                      <svg
+                        width="45"
+                        height="45"
+                        preserveAspectRatio="xMidYMid meet"
+                      >
+                        <use xlink:href="img/insta.svg#insta"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="second_block">
+                    <a href="" class="header_nav_panel-social_item">
+                      <svg
+                        width="45"
+                        height="31"
+                        preserveAspectRatio="xMidYMid meet"
+                      >
+                        <use xlink:href="img/Youtube.svg#youtube"></use>
+                      </svg>
+                    </a>
+                    <a href="" class="header_nav_panel-social_item">
+                      <svg
+                        width="45"
+                        height="24"
+                        preserveAspectRatio="xMidYMid meet"
+                      >
+                        <use xlink:href="img/VK.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="section_menu-btn">
+                <span class="menu-btn">
+                  <span></span>
+                </span>
+              </div>
+            </div>
 
             <span class="header_phone">+7 495 123-45-67</span>
           </header>
@@ -151,7 +202,7 @@
         <div class="container">
           <h2 class="ubout_theater-title"><span>о</span> театре</h2>
           <div class="row ubout_theater-content">
-            <div class="col-5 ubout_theater-content-description">
+            <div class="col-md-8 col-xl-5 ubout_theater-content-description">
               <h3 class="ubout_theater-content-description_title">
                 Самый лучший театр СПБ
               </h3>
@@ -167,21 +218,27 @@
                 свидетельствах, годом открытия можно считать 1784 год.
               </p>
             </div>
-            <div class="col-3 ubout_theater-content-numbers">
-              <h3 class="ubout_theater-content-numbers_title">немного о цифрах</h3>
+            <div class="col-md-4 col-xl-3 ubout_theater-content-numbers">
+              <h3 class="ubout_theater-content-numbers_title">
+                немного о цифрах
+              </h3>
               <div class="ubout_theater-content-numbers-items">
                 <div class="ubout_theater-content-numbers-items_item">
-                  <img src="img/armchair.svg" alt="" class="item_img">
-                  <p class="item_text"><span id="count-text">1600</span> посадочный мест</p>
+                  <img src="img/armchair.svg" alt="" class="item_img" />
+                  <p class="item_text">
+                    <span id="count-text">1600</span> посадочный мест
+                  </p>
                 </div>
                 <div class="ubout_theater-content-numbers-items_item">
-                  <img src="img/curtains.svg" alt="" class="item_img">
-                  <p class="item_text"><span id="count-text">350</span> лет истории</p>
+                  <img src="img/curtains.svg" alt="" class="item_img" />
+                  <p class="item_text">
+                    <span id="count-text">350</span> лет истории
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-4 ubout_theater-content-img">
-              <img src="img/B2img-min.jpg" alt="">
+            <div class="col-lg-4 ubout_theater-content-img">
+              <img src="img/B2img-min.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -189,9 +246,216 @@
 
       <!------------------ performances section ----------------------->
       <section class="performances">
-        h2.perfomances_title>наши постановки^
+        <div id="container">
+          <h2 class="perfomances_title"><span>наши</span> постановки</h2>
+          <div class="performances_items">
+            <div class="performances_items-item">
+              <img
+                src="img/B3carousel1-min.png"
+                alt=""
+                class="performances_items-item_poster"
+              />
+              <a href="" class="performances_items-item_link">
+                <img
+                  src="img/search.svg"
+                  alt=""
+                  class="performances_items-item_link-img"
+                />
+              </a>
+              <div class="performances_items-item_cover">
+                <h3 class="performances_items-item_cover-title">оскар 2020</h3>
+                <p class="performances_items-item_cover-date">сентябрь 2020</p>
+              </div>
+            </div>
+            <div class="performances_items-item">
+              <img
+                src="img/B3carousel2-min.png"
+                alt=""
+                class="performances_items-item_poster"
+              />
+              <a href="" class="performances_items-item_link"
+                ><img
+                  src="img/search.svg"
+                  alt=""
+                  class="performances_items-item_link-img"
+              /></a>
+              <div class="performances_items-item_cover">
+                <h3 class="performances_items-item_cover-title">бетховен</h3>
+                <p class="performances_items-item_cover-date">июнь 2020</p>
+              </div>
+            </div>
+            <div class="performances_items-item">
+              <img
+                src="img/B3carousel3-min.png"
+                alt=""
+                class="performances_items-item_poster"
+              />
+              <a href="" class="performances_items-item_link"
+                ><img
+                  src="img/search.svg"
+                  alt=""
+                  class="performances_items-item_link-img"
+              /></a>
+              <div class="performances_items-item_cover">
+                <h3 class="performances_items-item_cover-title">
+                  золотой грамофон
+                </h3>
+                <p class="performances_items-item_cover-date">июль 2020</p>
+              </div>
+            </div>
+            <div class="performances_items-item">
+              <img
+                src="img/B3carousel4-min.png"
+                alt=""
+                class="performances_items-item_poster"
+              />
+              <a href="" class="performances_items-item_link"
+                ><img
+                  src="img/search.svg"
+                  alt=""
+                  class="performances_items-item_link-img"
+              /></a>
+              <div class="performances_items-item_cover">
+                <h3 class="performances_items-item_cover-title">щелкунчик</h3>
+                <p class="performances_items-item_cover-date">май 2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
+      <!------------------ opinion section ----------------------->
+      <section class="opinion">
+        <div id="opinion-container" class="container">
+          <div class="opinion_wraper">
+            <div class="opinion_years">
+              <p class="opinion_years-item">2018</p>
+              <p class="opinion_years-item">2019</p>
+              <p class="opinion_years-item">2020</p>
+            </div>
+            <div class="opinion_description">
+              <img src="img/stars.png" alt="" class="opinion_description-img" />
+              <p class="opinion_description-text">
+                Лучший театр <br />
+                по мнению театральных <br />
+                критиков Парижа
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------------ partners section ----------------------->
+      <section class="partners">
+        <div class="container">
+          <h2 class="partners_title"><span>партнеры</span> театра</h2>
+          <div class="partners_carousel">
+            <div class="partners_carousel-item">
+              <img
+                src="img/logoPartners.png"
+                alt=""
+                class="partners_carousel-item_img"
+              />
+              <img
+                src="img/logoPartners.png"
+                alt=""
+                class="partners_carousel-item_img"
+              />
+            </div>
+            <div class="partners_carousel-item">
+              <img
+                src="img/logoPartners.png"
+                alt=""
+                class="partners_carousel-item_img"
+              /><img
+                src="img/logoPartners.png"
+                alt=""
+                class="partners_carousel-item_img"
+              />
+            </div>
+            <div class="partners_carousel-item">
+              <img
+                src="img/logoPartners.png"
+                alt=""
+                class="partners_carousel-item_img"
+              /><img
+                src="img/logoPartners.png"
+                alt=""
+                class="partners_carousel-item_img"
+              />
+            </div>
+            <div class="partners_carousel-item">
+              <img
+                src="img/logoPartners.png"
+                alt=""
+                class="partners_carousel-item_img"
+              /><img
+                src="img/logoPartners.png"
+                alt=""
+                class="partners_carousel-item_img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------------ footer section ----------------------->
+      <footer class="footer_maecenas">
+        <div class="container">
+          <h2 class="footer_maecenas-title"><span>стать</span> меценатом</h2>
+          <div class="footer_maecenas-wraper">
+            <div class="footer_maecenas-contacts">
+              <div class="footer_maecenas-contacts_telephones">
+                <p>+7 (812) 123-45-55</p>
+                <p>+7 (812) 123-45-66</p>
+              </div>
+              <div class="footer_maecenas-contacts_adress">
+                <p>info@theater.ru</p>
+                <p>г. санкт-петербург, невский 140</p>
+              </div>
+            </div>
+            <div class="footer_maecenas-form">
+              <div class="footer_maecenas-form_info">
+                <div class="footer_maecenas-form_info-contacts">
+                  <input type="text" placeholder="Имя" />
+                  <input type="text" placeholder="Компания" />
+                  <input type="text" placeholder="Телефон" />
+                  <input type="text" placeholder="E-mail" />
+                </div>
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="footer_maecenas-form_info-masage"
+                  placeholder="Сообщение"
+                ></textarea>
+              </div>
+              <div class="footer_maecenas-form_button-wraper">
+                <p class="footer_maecenas-form_button-wraper_info">
+                  * Ваши данные не будут переданы третьим лицам, 100%
+                  вероятность. Конфиденциальность мы гарантируем, и защищаем
+                  персональные данные согласно законку ФЗ-52.
+                </p>
+                <button class="footer_maecenas-form_button-wraper-button">
+                  отправить
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!------------------------ post footer -------------------------->
+
+      <section class="the_rights">
+        <div class="container">
+          <div class="the_rights-wraper">
+            <div class="right">(с) Все права защищены. Большой театр. 2020</div>
+            <div class="made">Разработано d-e-n.ru</div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="js/index.js"></script>
@@ -204,6 +468,89 @@
 
     <script>
       $(document).ready(function () {
+        $(window)
+          .on("resize", function () {
+            if ($(window).width() <= 1024) {
+              $("#container").addClass("container");
+              $("#opinion-container").removeClass("container");
+              $(".performances_items").addClass("owl-carousel");
+
+              $(".partners_carousel").addClass("owl-carousel");
+              // $(".arrivals-carousel").addClass("owl-carousel");
+
+              $(".performances_items").owlCarousel({
+                loop: true,
+                margin: 10,
+                responsive: {
+                  320: {
+                    items: 1,
+                    nav: false,
+                    dots: true,
+                  },
+                  768: {
+                    items: 1.6,
+                    nav: false,
+                  },
+                  1024: {
+                    items: 1.6,
+                    nav: false,
+                    dots: false,
+                  },
+                },
+              });
+
+              $(".partners_carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                responsive: {
+                  320: {
+                    items: 1,
+                    dots: true,
+                  },
+                  768: {
+                    items: 2.5,
+                    nav: false,
+                    dots: true,
+                  },
+                  1024: {
+                    items: 2.5,
+                    nav: false,
+                    dots: true,
+                    loop: true,
+                  },
+                },
+              });
+
+              // $(".arrivals-carousel").owlCarousel({
+              //   loop: true,
+              //   margin: 10,
+              //   responsive: {
+              //     320: {
+              //       items: 1,
+              //       dots: true,
+              //     },
+              //     768: {
+              //       items: 2,
+              //       nav: false,
+              //       dots: true,
+              //     },
+              //     1024: {
+              //       items: 4,
+              //       nav: false,
+              //       dots: false,
+              //       loop: false,
+              //     },
+              //   },
+              // });
+            } else {
+              $(".performances_items").removeClass("owl-carousel");
+              $("#opinion-container").addClass("container");
+              // $(".brands_carousel").removeClass("owl-carousel");
+              // $(".arrivals-carousel").removeClass("owl-carousel");
+            }
+          })
+          .trigger("resize");
+
         $(".first_section-content_carousel").owlCarousel({
           loop: true,
           margin: 10,

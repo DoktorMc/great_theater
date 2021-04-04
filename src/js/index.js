@@ -1,5 +1,5 @@
 const $menuBtn = document.querySelector(".menu-btn");
-const $menu = document.querySelector(".main_navbar-menu");
+const $menu = document.querySelector(".header_nav_panel");
 
 // burger menu
 
