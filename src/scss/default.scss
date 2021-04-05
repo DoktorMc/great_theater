@@ -42,9 +42,12 @@ div {
   height: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-left: $mobile-pads;
-  padding-right: $mobile-pads;
-  
+
+  @include mobile {
+    max-width: 100%;
+    padding-left: $mobile-pads;
+    padding-right: $mobile-pads;
+  }
   @include tablet {
     max-width: 100%;
   }
