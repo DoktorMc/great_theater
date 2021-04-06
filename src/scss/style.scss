@@ -96,13 +96,16 @@
         opacity: 0;
         height: 100%;
         width: 300px;
-        padding: 140px 0 0 39px;
+        padding: 110px 0 0 39px;
         flex-direction: column;
         background: #333333;
         z-index: 99;
         text-align: left;
         transition: all 0.3s ease-out;
         box-sizing: border-box;
+        @include tablet {
+          padding: 140px 0 0 39px;
+        }
         @include laptop {
           padding: 0;
         }
@@ -126,7 +129,11 @@
         }
 
         &-item {
-          margin-bottom: 35px;
+          margin-bottom: 15px;
+
+          @include tablet {
+            margin-bottom: 35px;
+          }
           @include laptop {
             margin-bottom: 0;
             margin-right: 28px;
@@ -167,7 +174,11 @@
           height: 126px;
           width: 140px;
           margin-left: 40px;
-          margin-top: 54px;
+          margin-top: 40px;
+
+          @include tablet {
+            margin-top: 54px;
+          }
           .first_block {
             display: flex;
             justify-content: space-between;
@@ -404,27 +415,27 @@
           @include mobile {
             justify-content: space-around;
             align-items: flex-start;
-            flex-direction: row; 
+            flex-direction: row;
           }
-          @include tablet{
+          @include tablet {
             flex-direction: column;
           }
 
           &_item {
             text-align: center;
-            @include mobile{
+            @include mobile {
               text-align: left;
             }
             &:last-child {
               margin-top: 25px;
-              @include mobile{
+              @include mobile {
                 margin-top: 0;
               }
               @include desktop {
                 margin-top: 25px;
               }
             }
-            .item_img{
+            .item_img {
               width: 70px;
               height: 70px;
             }
@@ -540,21 +551,22 @@
 
   //-----  performances section -----
   .opinion {
-    background: #333333;
-    padding-bottom: 150px;
-    
+    background: linear-gradient(
+        0deg,
+        rgba(51, 51, 51, 0.9),
+        rgba(51, 51, 51, 0.9)
+      ),
+      url(../img/B4img-min.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 150px;
+    @include desktop {
+      background: #333333;
+    }
     &_wraper {
       display: flex;
       flex-direction: column;
-      background: linear-gradient(
-          0deg,
-          rgba(51, 51, 51, 0.9),
-          rgba(51, 51, 51, 0.9)
-        ),
-        url(../img/B4img-min.png);
-      background-position: top;
-      background-size: cover;
-      background-repeat: no-repeat;
 
       @include mobile {
         padding: 116px 0 116px 99px;
@@ -562,6 +574,18 @@
       }
 
       @include laptop {
+        padding: 120px 0;
+      }
+      @include desktop {
+        background: linear-gradient(
+            0deg,
+            rgba(51, 51, 51, 0.9),
+            rgba(51, 51, 51, 0.9)
+          ),
+          url(../img/B4img-min.png);
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
         padding: 126px 0 126px 190px;
       }
 
@@ -631,11 +655,15 @@
     }
     &_carousel {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       margin-top: 100px;
+      @include tablet {
+        justify-content: space-around;
+      }
       &-item {
         display: flex;
         flex-direction: column;
+        align-items: center;
         &:last-child {
           margin-right: 0;
         }
@@ -780,9 +808,14 @@
               color: #ffffff;
               padding: 8px 15px;
               width: 100%;
+
               margin-bottom: 30px;
               @include mobile {
-                width: auto;
+                width: 230px;
+                margin-right: 50px;
+                &:nth-child(2n) {
+                  margin-right: 0;
+                }
               }
               @include tablet {
                 width: 180px;
