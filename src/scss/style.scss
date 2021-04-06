@@ -397,17 +397,36 @@
         &-items {
           margin-top: 40px;
           display: flex;
-          justify-content: space-around;
-          @include tablet {
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          @include mobile {
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-direction: row; 
+          }
+          @include tablet{
             flex-direction: column;
           }
 
           &_item {
-            text-align: left;
+            text-align: center;
+            @include mobile{
+              text-align: left;
+            }
             &:last-child {
+              margin-top: 25px;
+              @include mobile{
+                margin-top: 0;
+              }
               @include desktop {
                 margin-top: 25px;
               }
+            }
+            .item_img{
+              width: 70px;
+              height: 70px;
             }
             .item_text {
               font-style: normal;
@@ -523,7 +542,7 @@
   .opinion {
     background: #333333;
     padding-bottom: 150px;
-
+    
     &_wraper {
       display: flex;
       flex-direction: column;
@@ -536,8 +555,10 @@
       background-position: top;
       background-size: cover;
       background-repeat: no-repeat;
-      @include tablet {
+
+      @include mobile {
         padding: 116px 0 116px 99px;
+        flex-direction: row;
       }
 
       @include laptop {
@@ -667,7 +688,7 @@
         justify-content: space-between;
         margin-top: 60px;
         flex-direction: column;
-        @include tablet{
+        @include tablet {
           flex-direction: row;
         }
         @include laptop {
@@ -680,6 +701,13 @@
           width: 255px;
         }
         &_telephones {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          @include tablet {
+            justify-content: flex-start;
+            flex-direction: column;
+          }
           > p {
             font-family: $OSCondensed;
             font-style: normal;
@@ -693,6 +721,16 @@
           }
         }
         &_adress {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          @include tablet {
+            align-items: flex-end;
+          }
+          @include desktop {
+            align-items: flex-start;
+          }
           > p {
             font-family: $OSCondensed;
             font-style: normal;
@@ -825,13 +863,16 @@
   .the_rights {
     background: #333333;
 
-    @include laptop {
-    }
     .the_rights-wraper {
       border-top: 1px solid #565656;
-      padding: 30px 0;
+      padding: 10px 0;
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
+      @include tablet {
+        padding: 30px 0;
+        flex-direction: row;
+      }
       .right {
         font-family: $OS;
         font-style: normal;
@@ -839,6 +880,8 @@
         font-size: 12px;
         line-height: 150%;
         color: #989898;
+        @include laptop {
+        }
       }
       .made {
         font-family: $OS;
@@ -847,6 +890,8 @@
         font-size: 12px;
         line-height: 150%;
         color: #989898;
+        @include laptop {
+        }
       }
     }
   }
