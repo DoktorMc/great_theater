@@ -5,13 +5,13 @@
 }
 
 @mixin mobile {
-  @media (min-width: $mobile-width) {
+  @media (min-width: $mobile-width) and (orientation:landscape){
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width){
     @content;
   }
 }

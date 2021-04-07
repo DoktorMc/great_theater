@@ -103,8 +103,11 @@
         text-align: left;
         transition: all 0.3s ease-out;
         box-sizing: border-box;
+        overflow-y: scroll;
+        @include mobile{
+          
+        }
         @include tablet {
-          overflow-y: scroll;
           padding: 140px 0 20px 39px;
         }
         @include laptop {
