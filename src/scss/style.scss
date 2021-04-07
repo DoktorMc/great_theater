@@ -96,15 +96,16 @@
         opacity: 0;
         height: 100%;
         width: 300px;
-        padding: 110px 0 0 39px;
+        padding: 110px 0 20px 39px;
         flex-direction: column;
         background: #333333;
         z-index: 99;
         text-align: left;
         transition: all 0.3s ease-out;
         box-sizing: border-box;
+        overflow-y: scroll;
         @include tablet {
-          padding: 140px 0 0 39px;
+          padding: 140px 0 20px 39px;
         }
         @include laptop {
           padding: 0;
@@ -566,7 +567,9 @@
     }
     &_wraper {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 116px 0 116px 0;
 
       @include mobile {
         padding: 116px 0 116px 99px;
@@ -590,11 +593,13 @@
       }
 
       .opinion_years {
-        margin-right: 25px;
-        width: 152px;
-
+        padding: 20px 0 20px;
+        margin-right: 5px;
+        @include mobile {
+          margin-right: 25px;
+          width: 152px;
+        }
         @include laptop {
-          margin-right: 115px;
           width: 182px;
         }
 
@@ -602,19 +607,28 @@
           font-family: $OSCondensed;
           font-style: normal;
           font-weight: bold;
-          font-size: 72px;
-          line-height: 98px;
+          font-size: 60px;
+          line-height: 75px;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: $theaterGold;
+
+          @include mobile {
+            font-size: 72px;
+            line-height: 98px;
+          }
         }
       }
       .opinion_description {
         padding: 45px 0;
         &-img {
           margin-bottom: 25px;
-          width: 191px;
-          height: 24px;
+          width: 160px;
+          height: 18px;
+          @include mobile {
+            width: 191px;
+            height: 24px;
+          }
           @include desktop {
             width: 230px;
           }
@@ -622,10 +636,12 @@
         &-text {
           font-style: normal;
           font-weight: bold;
-          font-size: 25px;
+          font-size: 22px;
           line-height: 150%;
           color: #ffffff;
-
+          @include mobile {
+            font-size: 25px;
+          }
           @include tablet {
             font-size: 29px;
           }
@@ -788,40 +804,45 @@
           }
           &-contacts {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             width: 100%;
-
-            margin-right: 30px;
             @include tablet {
               height: 101px;
-              width: 390px;
+              min-width: 390px;
+              margin-right: 30px;
             }
-            > input {
-              background: #444444;
-              border: 1px solid #616161;
-              box-sizing: border-box;
-              font-family: $OS;
-              font-style: normal;
-              font-weight: 600;
-              font-size: 12px;
-              line-height: 150%;
-              color: #ffffff;
-              padding: 8px 15px;
-              width: 100%;
+            .contacts_wraper {
+              display: flex;
+              > input {
+                background: #444444;
+                border: 1px solid #616161;
+                box-sizing: border-box;
+                font-family: $OS;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 150%;
+                color: #ffffff;
+                padding: 8px 15px;
+                width: 100%;
 
-              margin-bottom: 30px;
-              @include mobile {
-                width: 230px;
-                margin-right: 50px;
+                margin-bottom: 30px;
+                margin-right: 20px;
                 &:nth-child(2n) {
                   margin-right: 0;
                 }
-              }
-              @include tablet {
-                width: 180px;
-                margin-right: 30px;
-                &:nth-child(2n) {
-                  margin-right: 0;
+                @include mobile {
+                  margin-right: 50px;
+                  &:nth-child(2n) {
+                    margin-right: 0;
+                  }
+                }
+                @include tablet {
+                  min-width: 180px;
+                  margin-right: 30px;
+                  &:nth-child(2n) {
+                    margin-right: 0;
+                  }
                 }
               }
             }
@@ -843,7 +864,7 @@
             outline: none;
             color: #ffffff;
             @include tablet {
-              width: 270px;
+              min-width: 270px;
               height: 100px;
             }
           }

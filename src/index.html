@@ -417,10 +417,14 @@
             <div class="footer_maecenas-form">
               <div class="footer_maecenas-form_info">
                 <div class="footer_maecenas-form_info-contacts">
-                  <input type="text" placeholder="Имя" />
-                  <input type="text" placeholder="Компания" />
-                  <input type="text" placeholder="Телефон" />
-                  <input type="text" placeholder="E-mail" />
+                  <div class="contacts_wraper">
+                    <input type="text" placeholder="Имя" />
+                    <input type="text" placeholder="Компания" />
+                  </div>
+                  <div class="contacts_wraper">
+                    <input type="text" placeholder="Телефон" />
+                    <input type="text" placeholder="E-mail" />
+                  </div>
                 </div>
                 <textarea
                   name=""
@@ -472,7 +476,7 @@
           .on("resize", function () {
             if ($(window).width() <= 1024) {
               $("#container").addClass("container");
-              $("#opinion-container").removeClass("container");
+              // $("#opinion-container").removeClass("container");
               $(".performances_items").addClass("owl-carousel");
 
               $(".partners_carousel").addClass("owl-carousel");
@@ -507,7 +511,7 @@
                     items: 1,
                     dots: true,
                   },
-                  450:{
+                  450: {
                     items: 2,
                     nav: false,
                     dots: true,
