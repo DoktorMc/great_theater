@@ -248,7 +248,7 @@
       <section class="performances">
         <div id="container">
           <h2 class="perfomances_title"><span>наши</span> постановки</h2>
-          <div class="performances_items">
+          <div class="owl-carousel performances_items">
             <div class="performances_items-item">
               <img
                 src="img/B3carousel1-min.png"
@@ -475,33 +475,8 @@
         $(window)
           .on("resize", function () {
             if ($(window).width() <= 1024) {
-              $("#container").addClass("container");
-              // $("#opinion-container").removeClass("container");
-              $(".performances_items").addClass("owl-carousel");
-
               $(".partners_carousel").addClass("owl-carousel");
-              // $(".arrivals-carousel").addClass("owl-carousel");
-
-              $(".performances_items").owlCarousel({
-                loop: true,
-                margin: 10,
-                responsive: {
-                  320: {
-                    items: 1,
-                    nav: false,
-                    dots: true,
-                  },
-                  768: {
-                    items: 1.6,
-                    nav: false,
-                  },
-                  1024: {
-                    items: 1.6,
-                    nav: false,
-                    dots: false,
-                  },
-                },
-              });
+              $("#container").addClass("container");
 
               $(".partners_carousel").owlCarousel({
                 loop: true,
@@ -529,36 +504,45 @@
                   },
                 },
               });
-
-              // $(".arrivals-carousel").owlCarousel({
-              //   loop: true,
-              //   margin: 10,
-              //   responsive: {
-              //     320: {
-              //       items: 1,
-              //       dots: true,
-              //     },
-              //     768: {
-              //       items: 2,
-              //       nav: false,
-              //       dots: true,
-              //     },
-              //     1024: {
-              //       items: 4,
-              //       nav: false,
-              //       dots: false,
-              //       loop: false,
-              //     },
-              //   },
-              // });
             } else {
-              $(".performances_items").removeClass("owl-carousel");
               $("#opinion-container").addClass("container");
-              // $(".brands_carousel").removeClass("owl-carousel");
-              // $(".arrivals-carousel").removeClass("owl-carousel");
             }
           })
           .trigger("resize");
+
+        $(".performances_items").owlCarousel({
+          loop: true,
+          margin: 10,
+          responsive: {
+            items: 4,
+            nav: false,
+            dots: false,
+            320: {
+              items: 1,
+              nav: false,
+              dots: true,
+            },
+            768: {
+              items: 1.6,
+              nav: false,
+            },
+            992: {
+              items: 2.8,
+              nav: false,
+              dots: false,
+            },
+            1200: {
+              items: 3.2,
+              nav: false,
+              dots: false,
+            },
+            1450: {
+              items: 4,
+              nav: false,
+              dots: false,
+            },
+          },
+        });
 
         $(".first_section-content_carousel").owlCarousel({
           loop: true,
